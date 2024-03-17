@@ -1,14 +1,14 @@
 export const light = {
   alternate: {
-    main: '#f7faff',
-    dark: '#edf1f7',
+    main: '#2b86d6',
+    dark: '#2b86d6',
   },
   cardShadow: 'rgba(23, 70, 161, .11)',
   mode: 'light',
   primary: {
-    main: '#377dff',
-    light: '#467de3',
-    dark: '#2f6ad9',
+    main: '#2b86d6',
+    light: '#2b86d6',
+    dark: '#2b86d6',
     contrastText: '#fff',
   },
   secondary: {

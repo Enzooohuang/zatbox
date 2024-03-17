@@ -4,12 +4,10 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material/styles';
+
+import logo from '../../../../logo.png';
 
 const Footer = () => {
-  const theme = useTheme();
-  const { mode } = theme.palette;
-
   return (
     <Grid
       container
@@ -30,18 +28,12 @@ const Footer = () => {
             display={'flex'}
             component='a'
             href='/'
-            title='theFront'
-            width={80}
+            title='ZatBox'
           >
             <Box
               component={'img'}
-              src={
-                mode === 'light'
-                  ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-                  : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-              }
-              height={1}
-              width={1}
+              src={logo}
+              className='App-logo-small'
             />
           </Box>
           <Box

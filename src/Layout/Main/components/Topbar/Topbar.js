@@ -4,20 +4,14 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { alpha, useTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
+import Link from '@mui/material/Link';
+
+import logo from '../../../../logo.png';
 
 import { NavItem } from './components';
 
-const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
+const Topbar = ({ onSidebarOpen, pages }) => {
   const theme = useTheme();
-  const { mode } = theme.palette;
-  const {
-    landings: landingPages,
-    secondary: secondaryPages,
-    company: companyPages,
-    account: accountPages,
-    portfolio: portfolioPages,
-    blog: blogPages,
-  } = pages;
 
   return (
     <Box
@@ -30,72 +24,45 @@ const Topbar = ({ onSidebarOpen, pages, colorInvert = false }) => {
         display={'flex'}
         component='a'
         href='/'
-        title='theFront'
-        width={{ xs: 100, md: 120 }}
+        title='ZatBox'
       >
         <Box
           component={'img'}
-          src={
-            mode === 'light' && !colorInvert
-              ? 'https://assets.maccarianagency.com/the-front/logos/logo.svg'
-              : 'https://assets.maccarianagency.com/the-front/logos/logo-negative.svg'
-          }
-          height={1}
-          width={1}
+          src={logo}
+          className='App-logo'
         />
       </Box>
       <Box
         sx={{ display: { xs: 'none', md: 'flex' } }}
         alignItems={'center'}
       >
-        <Box>
-          <NavItem
-            title={'Landings'}
-            id={'landing-pages'}
-            items={landingPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Company'}
-            id={'company-pages'}
-            items={companyPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Account'}
-            id={'account-pages'}
-            items={accountPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Pages'}
-            id={'secondary-pages'}
-            items={secondaryPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Blog'}
-            id={'blog-pages'}
-            items={blogPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
-        <Box marginLeft={4}>
-          <NavItem
-            title={'Portfolio'}
-            id={'portfolio-pages'}
-            items={portfolioPages}
-            colorInvert={colorInvert}
-          />
-        </Box>
+        {pages.map((p, i) => (
+          <Box
+            key={i}
+            marginLeft={3}
+          >
+            {!p.children ? (
+              <Link
+                href={p.href}
+                color={'text.primary'}
+                underline={'none'}
+                sx={{
+                  '&:hover': {
+                    color: 'primary.main',
+                  },
+                }}
+              >
+                {p.title}
+              </Link>
+            ) : (
+              <NavItem
+                title={p.title}
+                items={p.children}
+                id={p.id}
+              />
+            )}
+          </Box>
+        ))}
         <Box marginLeft={4}>
           <Button
             variant='contained'
