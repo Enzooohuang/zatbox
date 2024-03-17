@@ -18,7 +18,7 @@ const Routes = () => {
         element={
           <Navigate
             replace
-            to='/not-found-cover'
+            to='/not_found'
           />
         }
       />

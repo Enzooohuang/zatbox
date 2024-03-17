@@ -5,20 +5,19 @@ const pages = [
     id: 'home',
   },
   {
-    title: 'Listing',
-    id: 'demo__ecommerece-listing',
-    children: [
-      {
-        title: 'Search Listing',
-        href: '/demos/ecommerce/listing',
-        id: 'demo__ecommerece-listing--search',
-      },
-      {
-        title: 'Promotions',
-        href: '/demos/ecommerce/promotions',
-        id: 'demo__ecommerece-listing--promotions',
-      },
-    ],
+    title: 'How it works',
+    href: '/how_it_works',
+    id: 'how_it_works',
+  },
+  {
+    title: 'Products',
+    href: '/products',
+    id: 'products',
+  },
+  {
+    title: 'About',
+    href: '/about',
+    id: 'about',
   },
 ];
 

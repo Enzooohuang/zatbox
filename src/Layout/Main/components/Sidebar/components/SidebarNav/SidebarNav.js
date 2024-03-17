@@ -37,6 +37,9 @@ const SidebarNav = ({ pages }) => {
           <Box
             key={i}
             marginLeft={3}
+            marginBottom={3}
+            alignItems='center'
+            justifyContent='center'
           >
             {!p.children ? (
               <Link
@@ -68,9 +71,9 @@ const SidebarNav = ({ pages }) => {
             fullWidth
             component='a'
             target='blank'
-            href='https://mui.com/store/items/the-front-landing-page/'
+            href='/contact'
           >
-            Purchase now
+            Contact us
           </Button>
         </Box>
       </Box>

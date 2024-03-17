@@ -69,10 +69,10 @@ const Topbar = ({ onSidebarOpen, pages }) => {
             color='primary'
             component='a'
             target='blank'
-            href='https://mui.com/store/items/the-front-landing-page/'
+            href='/contact'
             size='large'
           >
-            Buy now
+            Contact us
           </Button>
         </Box>
       </Box>
