@@ -3,13 +3,16 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Page from './Page';
 import Routes from './Routes';
+import Main from './Layout/Main/Main';
 
 function App() {
   return (
     <Page>
-      <BrowserRouter>
-        <Routes />
-      </BrowserRouter>
+      <Main>
+        <BrowserRouter>
+          <Routes />
+        </BrowserRouter>
+      </Main>
     </Page>
   );
 }

@@ -1,8 +1,8 @@
 const pages = [
   {
     title: 'Home',
-    href: '/demos/ecommerce',
-    id: 'demo__ecommerece-home',
+    href: '/',
+    id: 'home',
   },
   {
     title: 'Listing',

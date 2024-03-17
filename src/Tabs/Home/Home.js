@@ -1,13 +1,11 @@
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import Container from '../../Components/Container';
 
-const NotFoundCover = () => {
+const Home = () => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -45,39 +43,8 @@ const NotFoundCover = () => {
                   align={isMd ? 'left' : 'center'}
                   sx={{ fontWeight: 700 }}
                 >
-                  404
+                  Home
                 </Typography>
-                <Typography
-                  variant='h6'
-                  component='p'
-                  color='text.secondary'
-                  align={isMd ? 'left' : 'center'}
-                >
-                  Oops! Looks like you followed a bad link.
-                  <br />
-                  If you think this is a problem with us, please{' '}
-                  <Link
-                    href={''}
-                    underline='none'
-                  >
-                    tell us
-                  </Link>
-                </Typography>
-                <Box
-                  marginTop={4}
-                  display={'flex'}
-                  justifyContent={{ xs: 'center', md: 'flex-start' }}
-                >
-                  <Button
-                    component={Link}
-                    variant='contained'
-                    color='primary'
-                    size='large'
-                    href={'/'}
-                  >
-                    Back home
-                  </Button>
-                </Box>
               </Box>
             </Container>
           </Box>
@@ -157,4 +124,4 @@ const NotFoundCover = () => {
   );
 };
 
-export default NotFoundCover;
+export default Home;
