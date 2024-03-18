@@ -39,7 +39,7 @@ const Topbar = ({ onSidebarOpen, pages }) => {
         {pages.map((p, i) => (
           <Box
             key={i}
-            marginLeft={3}
+            marginLeft={5}
           >
             {!p.children ? (
               <Link
@@ -63,7 +63,7 @@ const Topbar = ({ onSidebarOpen, pages }) => {
             )}
           </Box>
         ))}
-        <Box marginLeft={4}>
+        <Box marginLeft={5}>
           <Button
             variant='contained'
             color='primary'
@@ -81,10 +81,21 @@ const Topbar = ({ onSidebarOpen, pages }) => {
         alignItems={'center'}
       >
         <Button
+          variant='contained'
+          color='primary'
+          component='a'
+          target='blank'
+          href='/contact'
+          size='large'
+        >
+          Contact us
+        </Button>
+        <Button
           onClick={() => onSidebarOpen()}
           aria-label='Menu'
           variant={'outlined'}
           sx={{
+            marginLeft: 3,
             borderRadius: 2,
             minWidth: 'auto',
             padding: 1,

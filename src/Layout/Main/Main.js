@@ -62,7 +62,7 @@ const Main = ({ children, bgcolor = 'transparent' }) => {
         {children}
         <Divider />
       </main>
-      <Container paddingY={4}>
+      <Container paddingY={2}>
         <Footer />
       </Container>
     </Box>

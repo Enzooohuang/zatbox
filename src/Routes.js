@@ -18,7 +18,7 @@ const Routes = () => {
         element={
           <Navigate
             replace
-            to='/not_found'
+            to='/not-found'
           />
         }
       />

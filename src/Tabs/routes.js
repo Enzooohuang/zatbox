@@ -11,7 +11,7 @@ const routes = [
     renderer: (params = {}) => <Home {...params} />,
   },
   {
-    path: '/how_it_works',
+    path: '/how-it-works',
     renderer: (params = {}) => <HowItWorks {...params} />,
   },
   {
@@ -19,7 +19,7 @@ const routes = [
     renderer: (params = {}) => <Products {...params} />,
   },
   {
-    path: '/about',
+    path: '/about-us',
     renderer: (params = {}) => <About {...params} />,
   },
   {
@@ -27,7 +27,7 @@ const routes = [
     renderer: (params = {}) => <Contact {...params} />,
   },
   {
-    path: '/not_found',
+    path: '/not-found',
     renderer: (params = {}) => <NotFoundCover {...params} />,
   },
 ];

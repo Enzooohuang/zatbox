@@ -1,12 +1,7 @@
 const pages = [
   {
-    title: 'Home',
-    href: '/',
-    id: 'home',
-  },
-  {
     title: 'How it works',
-    href: '/how_it_works',
+    href: '/how-it-works',
     id: 'how_it_works',
   },
   {
@@ -16,7 +11,7 @@ const pages = [
   },
   {
     title: 'About',
-    href: '/about',
+    href: '/about-us',
     id: 'about',
   },
 ];
