@@ -27,6 +27,7 @@ export const light = {
     default: '#ffffff',
     level2: '#f5f5f5',
     level1: '#ffffff',
+    background: '#f5f5f5',
   },
 };
 

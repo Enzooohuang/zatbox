@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import delivery from '../../Assets/delivery.jpg';
 import Container from '../../Components/Container';
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
         width: 1,
         height: 1,
         overflow: 'hidden',
+        backgroundColor: theme.palette.background.background,
       }}
     >
       <Container
@@ -41,16 +43,18 @@ const Home = () => {
             order={{ xs: 2, md: 1 }}
             display={'flex'}
             alignItems={'center'}
+            data-aos='fade-right'
           >
             <Container>
               <Box>
                 <Typography
-                  variant='h1'
-                  component={'h1'}
+                  variant='h2'
+                  component={'h2'}
                   align={isMd ? 'left' : 'center'}
-                  sx={{ fontWeight: 700 }}
+                  sx={{ fontWeight: 300 }}
+                  color='primary.main'
                 >
-                  Home
+                  An innovative & holistic solution for secure delivery
                 </Typography>
               </Box>
             </Container>
@@ -107,9 +111,7 @@ const Home = () => {
                     <Box
                       component={'img'}
                       loading='lazy'
-                      src={
-                        'https://assets.maccarianagency.com/backgrounds/img23.jpg'
-                      }
+                      src={delivery}
                       height={{ xs: 'auto', md: 1 }}
                       maxHeight={{ xs: 300, md: 1 }}
                       width={1}

@@ -21,6 +21,7 @@ const Footer = () => {
           alignItems={'center'}
           width={1}
           flexDirection={{ xs: 'column', sm: 'row' }}
+          color=''
         >
           <Box
             display={'flex'}

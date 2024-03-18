@@ -5,14 +5,13 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import AppBar from '@mui/material/AppBar';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
 
 import Container from '../../Components/Container';
 import pages from '../navigation';
 
 import { Topbar, Sidebar, Footer } from './components';
 
-const Main = ({ children, bgcolor = 'transparent' }) => {
+const Main = ({ children }) => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
@@ -30,20 +29,15 @@ const Main = ({ children, bgcolor = 'transparent' }) => {
 
   const open = isMd ? false : openSidebar;
 
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 38,
-  });
-
   return (
     <Box>
       <AppBar
         position={'sticky'}
         sx={{
           top: 0,
-          backgroundColor: trigger ? theme.palette.background.paper : bgcolor,
+          backgroundColor: theme.palette.background.paper,
         }}
-        elevation={trigger ? 1 : 0}
+        elevation={1}
       >
         <Container paddingY={1}>
           <Topbar
